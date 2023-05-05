@@ -14,7 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        private object reader;
+        
 
         public Form1()
         {
@@ -31,6 +31,7 @@ namespace WindowsFormsApp1
         {
             UserFileReader userFileReader = new UserFileReader();
             userFileReader.FileOpen();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -90,7 +91,7 @@ namespace WindowsFormsApp1
 
         private void label6_Click(object sender, EventArgs e)
         {
-
+           
         }
     }
 

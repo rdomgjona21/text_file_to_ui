@@ -396,3 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/WindowsFormsApp1/UserDisplayerForm.cs

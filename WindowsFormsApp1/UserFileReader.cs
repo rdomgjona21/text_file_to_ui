@@ -13,21 +13,18 @@ namespace WindowsFormsApp1
 
     public class UserFileReader
     {
-        string Txt;
-        public string FileOpen()
+       
+        public Reader FileOpen()
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Text documents|*.txt";
-            ofd.Multiselect = false;
-            if (ofd.ShowDialog() == DialogResult.OK)
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Text files only(*.txt)|*.txt";
+            dialog.Multiselect = false;
+            Reader reader = new Reader();
+            if (dialog.ShowDialog() == DialogResult.OK)
             {
-                using (StreamReader str = new StreamReader(ofd.FileName)) 
-                { 
-                    Txt = str.ReadToEnd();
-                    return Txt;
-                }
+                
             }
-            return Txt;
+            return reader;
         }
     }
 }

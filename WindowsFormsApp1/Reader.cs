@@ -11,13 +11,14 @@ namespace WindowsFormsApp1
         
         public string FirstNameString { get; set; }
         public string LastNameString { get; set; }
-        public int YearOfBirthString { get; set; }
+        public string YearOfBirthString { get; set; }
         public string CityString { get; set; }
         public string FacultyString { get; set; }
         public string RoleString { get; set; }
         public string DepartmentString { get; set; }
         public string FavoriteCourseString { get; set; }
-        public string Access{ get; set; }
+        public string Access { get;set; }
+        public string AmountofTimesRead{ get; set; }
     }
 
 }
