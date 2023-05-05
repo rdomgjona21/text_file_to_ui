@@ -30,7 +30,26 @@ namespace WindowsFormsApp1
 
         {
             UserFileReader userFileReader = new UserFileReader();
-            userFileReader.FileOpen();
+            UserParser userParser = new UserParser();
+            UserDisplayer userDisplayer = new UserDisplayer();
+            User reader = new User();
+            reader = userParser.Parse(userFileReader.FileOpen());
+            textFullName.Text = userDisplayer.Name(reader);
+            textYearofBirth.Text = reader.YearOfBirth.ToString();
+            textCity.Text = reader.City.ToString();
+            textFaculty.Text = reader.Faculty.ToString();
+            textRole.Text = reader.Role.ToString();
+
+            if (reader.Role == "student")
+            {
+                textDepartment.Text = reader.FavoriteCourse.ToString();
+                labelRoleDep.Text = "Favorite course:";
+            }
+            else
+            {
+                textDepartment.Text = reader.Department.ToString();
+                labelRoleDep.Text = "Department:";
+            }
 
         }
 

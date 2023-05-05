@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
         public string Department { get; set; }
         public string FavoriteCourse { get; set; }
         public string Access { get; set; }
-        public string AmountofTimesRead { get; set; }
+       
 
     }
 }
