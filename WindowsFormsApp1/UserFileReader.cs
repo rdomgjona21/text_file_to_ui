@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
             ofd.Multiselect = false;
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                using (StreamReader str = new StreamReader(ofd.SafeFileName)) 
+                using (StreamReader str = new StreamReader(ofd.FileName)) 
                 { 
                     Txt = str.ReadToEnd();
                     return Txt;
